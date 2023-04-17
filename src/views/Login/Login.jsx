@@ -12,7 +12,13 @@ import Register from "../../Components/Register/Register";
 export default function Login() {
   return (
     <>
-      <Grid container spacing={2} justifyContent="center" alignItems="center">
+      <Grid
+        container
+        spacing={2}
+        justifyContent="center"
+        alignItems="center"
+        sx={{ pl: 28 }}
+      >
         <Grid item xl={2}>
           <Logo size={48} color={"pink"} sx={2} />
         </Grid>
@@ -37,18 +43,14 @@ export default function Login() {
         </Grid>
       </Grid>
       <Garantias size={48} color={"pink"} />
-      <footer className="bg-dark text-light py-5">
-        <Privacidad size={28} />
-        <Grid
-          container
-          sx={{ m: 2 }}
-          justifyContent="center"
-        >
-          <Grid item xs={2} xl={2}>
-            <Newsletter size={52} color={"black"} />
-          </Grid>
+      <Grid container sx={{ background: "#AEDAB1" }}>
+        <Grid item xs={6} sx={{ pl: 20 }}>
+          <Privacidad size={28} />
         </Grid>
-      </footer>
+        <Grid item xs={6} sx={{ pl: 28 }}>
+          <Newsletter size={52} color={"black"} />
+        </Grid>
+      </Grid>
     </>
   );
 }

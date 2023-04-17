@@ -1,15 +1,14 @@
 import Buscador from "../../Components/Buscador/Buscador";
 import Carrusel from "../../Components/Carrusel/Carrusel";
 import Menu from "../../Components/Menu/Menu";
-import Card from "../../Components/Card/Card";
 import Garantias from "../../Components/Garantias/Garantias";
 import Privacidad from "../../Components/Privacidad/Privacidad";
 import Newsletter from "../../Components/Newsletter/Newsletter";
 import Carrito from "../../Components/Carrito/Carrito";
 import Logo from "../../Components/Logo/Logo";
 import { Grid } from "@mui/material";
-import Sesion from "../../Components/Sesion/Sesion";
-import Register from "../../Components/Register/Register";
+import Cards from "../../Components/Cards/Cards";
+
 
 const imageCarrusel = [
   {
@@ -57,7 +56,7 @@ export default function Home() {
   return (
     <>
       <Grid container spacing={2} justifyContent="center" alignItems="center">
-        <Grid item xl={2}>
+        <Grid item xl={2} >
           <Logo size={48} color={"pink"} sx={2} />
         </Grid>
         <Grid item xl={8}>
@@ -70,19 +69,18 @@ export default function Home() {
         </Grid>
         <Grid item xl={12}>
           <Menu />
+          <Cards />
         </Grid>
       </Grid>
-      <Garantias size={48} color={"pink"} />
-      <footer className="bg-dark text-light py-5">
-        <Grid container>
-          <Grid item xs={6} sx={{  pl:20 }}>
-            <Privacidad size={28} />
-          </Grid>
-          <Grid item xs={6} sx={{ pl:28 }}>
-            <Newsletter size={52} color={"black"} />
-          </Grid>
+      <Garantias />
+      <Grid container sx={{ background: "#AEDAB1" }}>
+        <Grid item xs={6} sx={{ pl: 20 }}>
+          <Privacidad size={28} />
         </Grid>
-      </footer>
+        <Grid item xs={6} sx={{ pl: 28 }}>
+          <Newsletter size={52} color={"black"} />
+        </Grid>
+      </Grid>
     </>
   );
 }

@@ -67,32 +67,33 @@ import { Grid, Typography } from "@mui/material";
 import GppGoodIcon from '@mui/icons-material/GppGood';
 import LocalShippingIcon from "@mui/icons-material/LocalShipping";
 import BookmarkIcon from "@mui/icons-material/Bookmark";
+import LocalOfferIcon from "@mui/icons-material/NewReleases";
 
-export default function Garantias({ size, color }) {
+export default function Garantias() {
   return (
     <Grid container sx={{ m: 2 }} alignContent="center" justifyContent="center">
       <Grid item xl={2} display="flex" alignItems="center">
-       endIcon={<GppGoodIcon />}
+        {<GppGoodIcon color="primary" fontSize="large" />}
         <Typography variant="h6" sx={{ textAlign: "center" }}>
           Pago seguro
         </Typography>
       </Grid>
       <Grid item xl={2} display="flex" alignItems="center">
-        endIcon={<LocalShippingIcon />}
+        {<LocalShippingIcon color="primary" fontSize="large" />}
         <Typography variant="h6" sx={{ textAlign: "center" }}>
           Envio gratuito
         </Typography>
       </Grid>
       <Grid item xl={2} display="flex" alignItems="center">
-        endIcon={<DiamondIcon />}
+        {<LocalOfferIcon color="primary" fontSize="large" />}
         <Typography variant="h6" sx={{ textAlign: "center" }}>
           Mejores ofertas
         </Typography>
       </Grid>
       <Grid item xl={2} display="flex" alignItems="center">
-        endIcon={<BookmarkIcon />}
+        {<BookmarkIcon color="primary" fontSize="large" />}
         <Typography variant="h6" sx={{ textAlign: "center" }}>
-          Mejores ofertas
+          2 años de garantía
         </Typography>
       </Grid>
     </Grid>

@@ -36,7 +36,7 @@ export default function Privacidad({size,color}) {
   return (
     <>
       <Grid container sx={{ m: 2 }}>
-        endIcon={<DiamondIcon />}
+        {<DiamondIcon />}
         <Typography variant="h5" sx={{ textAlign: "center" }}>
           Las Cositas de Mibel
         </Typography>

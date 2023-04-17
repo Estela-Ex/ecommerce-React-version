@@ -9,6 +9,9 @@
 // export default function Card({ producto }) {
 //   return (
 //     <>
+
+
+
      
 //             <div className="card" >
 //               <img
@@ -51,7 +54,13 @@
 //   );
 // }
 
-export default function RecipeReviewCard(title,image) {
+
+
+import { CardContent, CardHeader, CardMedia, Typography,Card } from "@mui/material";
+import StarIcon from "@mui/icons-material/Star";
+import EuroIcon from "@mui/icons-material/Euro";
+
+export default function Cards({title,image}) {
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardHeader title={title} />
@@ -61,6 +70,10 @@ export default function RecipeReviewCard(title,image) {
         image={image}
         alt="Paella dish"
       />
+      <Typography variant="subtitle" color="primary">
+        9.99
+        <EuroIcon/>
+      </Typography>
       <CardContent>
         <Typography variant="body2" color="text.secondary">
           This impressive paella is a perfect party dish and a fun meal to cook
@@ -68,15 +81,9 @@ export default function RecipeReviewCard(title,image) {
           mussels, if you like.
         </Typography>
       </CardContent>
-      <svg data-testid="StarIcon" width={16} height={16} color={"black"}>
         <StarIcon />
-      </svg>
-      <svg data-testid="StarIcon" width={16} height={16} color={"black"}>
         <StarIcon />
-      </svg>
-      <svg data-testid="StarIcon" width={16} height={16} color={"black"}>
         <StarIcon />
-      </svg>
     </Card>
   );
 }
