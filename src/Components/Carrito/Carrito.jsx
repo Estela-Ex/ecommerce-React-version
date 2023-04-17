@@ -25,19 +25,12 @@ import Button from '@mui/material/Button';
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { Grid } from '@mui/material';
 
+
 export default function Carrito(size,numero) {
   return (
     <Grid>
       <Stack spacing={2} direction="row">
-        <Button variant="contained" >
-          <svg
-            data-testid="ShoppingCartIcon"
-            width={16}
-            height={16}
-            color={"black"}
-          >
-            <ShoppingCartIcon />
-          </svg>
+        <Button endIcon={<ShoppingCartIcon />} variant="contained">
           Carrito{" "}
         </Button>
       </Stack>

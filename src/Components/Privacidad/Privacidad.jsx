@@ -36,14 +36,7 @@ export default function Privacidad({size,color}) {
   return (
     <>
       <Grid container sx={{ m: 2 }}>
-        <svg
-          data-testid="DiamondIcon"
-          width={size}
-          height={size}
-          color={"pink"}
-        >
-          <DiamondIcon />
-        </svg>
+        endIcon={<DiamondIcon />}
         <Typography variant="h5" sx={{ textAlign: "center" }}>
           Las Cositas de Mibel
         </Typography>

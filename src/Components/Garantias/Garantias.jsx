@@ -66,55 +66,31 @@
 import { Grid, Typography } from "@mui/material";
 import GppGoodIcon from '@mui/icons-material/GppGood';
 import LocalShippingIcon from "@mui/icons-material/LocalShipping";
-import LocalOfferIcon from "@mui/icons-material/LocalOffer";
 import BookmarkIcon from "@mui/icons-material/Bookmark";
 
 export default function Garantias({ size, color }) {
   return (
     <Grid container sx={{ m: 2 }} alignContent="center" justifyContent="center">
       <Grid item xl={2} display="flex" alignItems="center">
-        <svg data-testid="GppGoodIcon" width={size} height={size} color={color}>
-          <GppGoodIcon />
-        </svg>
+       endIcon={<GppGoodIcon />}
         <Typography variant="h6" sx={{ textAlign: "center" }}>
           Pago seguro
         </Typography>
       </Grid>
       <Grid item xl={2} display="flex" alignItems="center">
-        <svg
-          data-testid="LocalShippingIcon"
-          width={size}
-          height={size}
-          color={color}
-        >
-          <LocalShippingIcon />
-        </svg>
+        endIcon={<LocalShippingIcon />}
         <Typography variant="h6" sx={{ textAlign: "center" }}>
           Envio gratuito
         </Typography>
       </Grid>
       <Grid item xl={2} display="flex" alignItems="center">
-        <svg
-          data-testid="LocalOfferIcon"
-          width={size}
-          height={size}
-          color={color}
-        >
-          <LocalOfferIcon />
-        </svg>
+        endIcon={<DiamondIcon />}
         <Typography variant="h6" sx={{ textAlign: "center" }}>
           Mejores ofertas
         </Typography>
       </Grid>
       <Grid item xl={2} display="flex" alignItems="center">
-        <svg
-          data-testid="BookmarkIcon"
-          width={size}
-          height={size}
-          color={color}
-        >
-          <BookmarkIcon />
-        </svg>
+        endIcon={<BookmarkIcon />}
         <Typography variant="h6" sx={{ textAlign: "center" }}>
           Mejores ofertas
         </Typography>

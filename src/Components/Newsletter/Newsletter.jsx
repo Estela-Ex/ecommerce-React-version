@@ -71,71 +71,54 @@
 //   );
 // }
 
-import { Button, Checkbox, FormControlLabel, FormGroup, Grid, Stack, TextField, Typography } from "@mui/material";
+import {
+  Button,
+  Checkbox,
+  FormControlLabel,
+  FormGroup,
+  Grid,
+  TextField,
+  Typography,
+} from "@mui/material";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import InstagramIcon from "@mui/icons-material/Instagram";
 
-export default function Newsletter({ color}) {
+export default function Newsletter({ color }) {
   return (
-    <Grid container>
-      <Grid display="flex" alignItems="center">
-        <Stack spacing={2} direction="row">
-          <Typography variant="h5" xl={{ textAlign: "center" }}>
+    <>
+      <Grid>
+        <Grid>
+          <Typography variant="h6" sx={{ mt: 2, mb: 2, ml: 2 }}>
             Suscríbete a la Newsletter
           </Typography>
           <TextField
-            label="Suscríbete a la Newsletter"
-            size="large"
-          ></TextField>
-          <Button variant="contained">
-            <svg width={16} height={8} color={color}></svg>
+            sx={{backgroundColor:"whitesmoke",m:2}}
+            hiddenLabel
+            id="filled-hidden-label-small"
+            placeholder="Suscríbete a la Newsletter"
+            variant="filled"
+            size="small"
+          />
+          <Button variant="contained" size="large" sx={{ mt: 2, mb: 2 }}>
             Suscríbete
           </Button>
-          <FormGroup>
-            <FormControlLabel
-              control={<Checkbox defaultChecked />}
-              label="Acepto política de privacidad"
-            />
-          </FormGroup>
-        </Stack>
-        <Grid>
-          <svg
-            data-testid="FacebookIcon"
-            width={40}
-            height={40}
-            color={"white"}
-          >
-            <FacebookIcon />
-          </svg>
-        </Grid>
-        <Grid>
-          <svg data-testid="TwitterIcon" width={40} height={40} color={"white"}>
-            <TwitterIcon />
-          </svg>
-        </Grid>
-        <Grid>
-          <svg
-            data-testid="WhatsAppIcon"
-            width={40}
-            height={40}
-            color={"white"}
-          >
-            <WhatsAppIcon />
-          </svg>
-        </Grid>
-        <Grid>
-          <svg
-            data-testid="InstagramIcon"
-            width={40}
-            height={40}
-            color={"white"}
-          >
-            <InstagramIcon />
-          </svg>
         </Grid>
       </Grid>
-    </Grid>
+      <FormGroup sx={{ m: 2 }}>
+        <FormControlLabel
+          control={<Checkbox defaultChecked />}
+          label="Acepto política de privacidad"
+        />
+      </FormGroup>
+      <FacebookIcon fontSize="large" sx={{ ml: 1.5 }} />
+
+      <TwitterIcon fontSize="large" sx={{ ml: 2 }} />
+
+      <WhatsAppIcon fontSize="large" sx={{ ml: 2 }} />
+
+      <InstagramIcon fontSize="large" sx={{ ml: 2 }} />
+    </>
   );
 }

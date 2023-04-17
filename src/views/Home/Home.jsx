@@ -6,6 +6,10 @@ import Garantias from "../../Components/Garantias/Garantias";
 import Privacidad from "../../Components/Privacidad/Privacidad";
 import Newsletter from "../../Components/Newsletter/Newsletter";
 import Carrito from "../../Components/Carrito/Carrito";
+import Logo from "../../Components/Logo/Logo";
+import { Grid } from "@mui/material";
+import Sesion from "../../Components/Sesion/Sesion";
+import Register from "../../Components/Register/Register";
 
 const imageCarrusel = [
   {
@@ -51,44 +55,34 @@ const completCard = [
 
 export default function Home() {
   return (
-      <div className=" py-4 ">
-        <div className="row w-100">
-          <div className="col-3">
-            <Logo size={24} />
-          </div>
-          <div className="col-7">
-            <Buscador />
-          </div>
-          <div className="col-2 d-grid">
-            <Carrito/>
-          </div>
-        </div>        
-            <Menu />
-      <Carrusel images={imageCarrusel} />
-      <section className="container py-4 d-flex justify-content-between">
-        <h4>Aquí están las mejores ofertas para tí</h4>
-        <a href="#" className="btn btn-primary">
-          {"ver Ofertas"}
-        </a>
-      </section>
-      <div className=" container py-4 ">
-        <div className="row">
-          {completCard.map((producto, i) => (
-            <div key={i} className="col-3">
-              <Card producto={producto} />
-            </div>
-          ))}
-        </div>
-      </div>
-            <Garantias />
+    <>
+      <Grid container spacing={2} justifyContent="center" alignItems="center">
+        <Grid item xl={2}>
+          <Logo size={48} color={"pink"} sx={2} />
+        </Grid>
+        <Grid item xl={8}>
+          <Buscador size={16} sx={8} />
+        </Grid>
+        <Grid item xl={2}>
+          <Grid container justifyContent="center">
+            <Carrito size={16} numero={"99+"} sx={2} />
+          </Grid>
+        </Grid>
+        <Grid item xl={12}>
+          <Menu />
+        </Grid>
+      </Grid>
+      <Garantias size={48} color={"pink"} />
       <footer className="bg-dark text-light py-5">
-        <div className="container">
-          <div className="row">
-            <Privacidad />
-            <Newsletter />
-          </div>
-        </div>
+        <Grid container>
+          <Grid item xs={6} sx={{  pl:20 }}>
+            <Privacidad size={28} />
+          </Grid>
+          <Grid item xs={6} sx={{ pl:28 }}>
+            <Newsletter size={52} color={"black"} />
+          </Grid>
+        </Grid>
       </footer>
-      </div>
-  )
+    </>
+  );
 }
