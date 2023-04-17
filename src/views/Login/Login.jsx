@@ -38,8 +38,16 @@ export default function Login() {
       </Grid>
       <Garantias size={48} color={"pink"} />
       <footer className="bg-dark text-light py-5">
-        <Privacidad size={28}/>
-        <Newsletter />
+        <Privacidad size={28} />
+        <Grid
+          container
+          sx={{ m: 2 }}
+          justifyContent="center"
+        >
+          <Grid item xs={2} xl={2}>
+            <Newsletter size={52} color={"black"} />
+          </Grid>
+        </Grid>
       </footer>
     </>
   );

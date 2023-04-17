@@ -1,6 +1,6 @@
 // export default function Buscador() {
 //   return (
-    
+
 //       <div className="input-group">
 //         <input
 //           type="text"
@@ -20,20 +20,18 @@ import SearchIcon from "@mui/icons-material/Search";
 export default function Buscador(size) {
   return (
     <Grid>
-      
       <TextField
         label="Que necesitas buscar"
         size="large"
         sx={{ m: 1, width: "100%" }}
         InputProps={{
-        startAdornment: (
-          <InputAdornment position="start">
-            <SearchIcon />
-          </InputAdornment>
-        ),
-      }}
+          startAdornment: (
+            <InputAdornment position="start">
+              <SearchIcon />
+            </InputAdornment>
+          ),
+        }}
       />
     </Grid>
   );
 }
-

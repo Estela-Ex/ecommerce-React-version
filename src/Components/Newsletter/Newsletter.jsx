@@ -71,18 +71,71 @@
 //   );
 // }
 
-import { Button, TextField, Typography } from "@mui/material";
+import { Button, Checkbox, FormControlLabel, FormGroup, Grid, Stack, TextField, Typography } from "@mui/material";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import TwitterIcon from "@mui/icons-material/Twitter";
+import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+import InstagramIcon from "@mui/icons-material/Instagram";
 
-
-export default function Newsletter() {
+export default function Newsletter({ color}) {
   return (
-    <>
-      <TextField>
-        label= "Suscríbete a nuestra Newsletter"
-        
-      </TextField>
-      <Button variant="contained">Suscríbete</Button>;
-    </>
+    <Grid container>
+      <Grid display="flex" alignItems="center">
+        <Stack spacing={2} direction="row">
+          <Typography variant="h5" xl={{ textAlign: "center" }}>
+            Suscríbete a la Newsletter
+          </Typography>
+          <TextField
+            label="Suscríbete a la Newsletter"
+            size="large"
+          ></TextField>
+          <Button variant="contained">
+            <svg width={16} height={8} color={color}></svg>
+            Suscríbete
+          </Button>
+          <FormGroup>
+            <FormControlLabel
+              control={<Checkbox defaultChecked />}
+              label="Acepto política de privacidad"
+            />
+          </FormGroup>
+        </Stack>
+        <Grid>
+          <svg
+            data-testid="FacebookIcon"
+            width={40}
+            height={40}
+            color={"white"}
+          >
+            <FacebookIcon />
+          </svg>
+        </Grid>
+        <Grid>
+          <svg data-testid="TwitterIcon" width={40} height={40} color={"white"}>
+            <TwitterIcon />
+          </svg>
+        </Grid>
+        <Grid>
+          <svg
+            data-testid="WhatsAppIcon"
+            width={40}
+            height={40}
+            color={"white"}
+          >
+            <WhatsAppIcon />
+          </svg>
+        </Grid>
+        <Grid>
+          <svg
+            data-testid="InstagramIcon"
+            width={40}
+            height={40}
+            color={"white"}
+          >
+            <InstagramIcon />
+          </svg>
+        </Grid>
+      </Grid>
+    </Grid>
   );
-  
 }
